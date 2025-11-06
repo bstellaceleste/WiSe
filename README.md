@@ -1,7 +1,7 @@
 # Women in Computer Science Days Cameroon
 
 
-**What is WoCC?** An annual seminar we organize in Cameroon (at the Polytechnic School of Yaounde) to share our experience with local researchers and students.
+**What is WiSe?** Previously called WoCC, WiSe is an annual seminar we organize in Cameroon (at the Polytechnic School of Yaounde) to share our experience with local researchers and students.
 
 
 <br>
