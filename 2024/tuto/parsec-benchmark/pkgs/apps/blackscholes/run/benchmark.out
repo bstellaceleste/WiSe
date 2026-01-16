@@ -1,8 +1,8 @@
 PARSEC Benchmark Suite Version 3.0-beta-20120904
-Num of Options: 4
+Num of Options: 65536
 Num of Runs: 100
-Size of data: 160
+Size of data: 2621440
 
-real	0m0,002s
-user	0m0,002s
-sys	0m0,000s
+real	0m0,530s
+user	0m0,526s
+sys	0m0,004s
