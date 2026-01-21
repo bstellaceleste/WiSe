@@ -1,0 +1,7 @@
+cat << 'EOF' > .gitignore
+obj-intel64/
+target_app
+*.o
+*.so
+pin-external-*/
+EOF

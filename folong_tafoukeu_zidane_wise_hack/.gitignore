@@ -1,0 +1,55 @@
+# Fichiers de logs et rapports générés
+*.log
+*.json
+*_report.json
+*_debug.log
+
+# Fichiers temporaires du correcteur
+sources/
+sources-*/
+wise_*
+test_*
+*_test.py
+*_debug.py
+*_temp.py
+
+# Environnement virtuel
+venv/
+env/
+.venv/
+
+# Fichiers Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frida
+frida-server*
+
+# Fichiers de validation (ne pas montrer au correcteur)
+validation_*
+jury_*
+*_validation.py
+*_jury.py
+EVALUATION_*
+GUIDE_*
+JURY_*
+
+# Versions de développement
+*_old.py
+*_backup.py
+*_v*.py
+*_draft.py

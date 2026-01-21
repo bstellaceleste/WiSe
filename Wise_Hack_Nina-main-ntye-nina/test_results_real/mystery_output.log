@@ -1,0 +1,236 @@
+╔══════════════════════════════════════════╗
+║  Adaptive Binary Instrumentation Engine ║
+║           WiSe Hack'25                   ║
+╚══════════════════════════════════════════╝
+
+
+=== PHASE 1: Profiling and Analysis ===
+[Profiler] Started profiling
+[Profiler] Learning phase: ACTIVE (10000 ms)
+[Phase 1] Using REAL BINARY MODE with strace
+[Phase 1] Target: ../00-subject/binairies/mystery
+[Phase 1] Collecting actual system call traces...
+
+[Tracer] Tracing binary: ../00-subject/binairies/mystery
+[Tracer] Using strace to collect system call information...
+
+[Engine] Received signal 15, shutting down gracefully...
+[Tracer] Binary terminated by signal 15
+[Tracer] Collected 496 system calls
+
+[Phase 1] Real binary profiling complete.
+[Phase 1] Simulating binary instrumentation...
+[Phase 1] (In production: DynamoRIO/Pin would instrument the target binary)
+[Profiler] Instrumented 10000 calls, tracking 22 functions
+[Profiler] Instrumented 20000 calls, tracking 24 functions
+[Profiler] Instrumented 30000 calls, tracking 26 functions
+[Profiler] Instrumented 40000 calls, tracking 28 functions
+[Profiler] Instrumented 50000 calls, tracking 30 functions
+[Profiler] Instrumented 100000 memory operations
+[Profiler] Instrumented 60000 calls, tracking 32 functions
+[Profiler] Instrumented 70000 calls, tracking 34 functions
+[Profiler] Instrumented 80000 calls, tracking 36 functions
+[Profiler] Instrumented 90000 calls, tracking 38 functions
+[Profiler] Instrumented 100000 calls, tracking 40 functions
+[Profiler] Instrumented 200000 memory operations
+[Profiler] Instrumented 110000 calls, tracking 162 functions
+[Phase 1] Profiling complete. Collected 114496 function calls
+[Profiler] Stopped profiling
+
+=== Profiler Summary ===
+Total Instructions:    0
+Instrumented Calls:    114496
+Instrumented Mem Ops:  218018
+Functions Tracked:     221
+Total Calls Recorded:  114496
+Total Mem Ops:         218018
+
+Statistics:
+  Call Mean:           518.08
+  Call StdDev:         2064.57
+  Call P95:            100
+  Call P99:            10000
+  Memory Mean:         986.51
+  Memory StdDev:       4140.37
+  Memory P95:          200
+  Memory P99:          20000
+========================
+
+
+[Phase 1] Statistics computed:
+  Mean calls:     518.08
+  Stddev calls:   2064.57
+  P95 calls:      100
+  P99 calls:      10000
+[HotspotDetector] Updated criteria:
+  Call Threshold:   4234 (518.08 + 1.80 * 2064.57)
+  Memory Threshold: 8439 (986.51 + 1.80 * 4140.37)
+
+=== END PHASE 1 ===
+
+=== PHASE 2: Hotspot Detection and Patching ===
+[HotspotDetector] HOTSPOT detected: func_0x400000 @ 0x400000
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[HotspotDetector] HOTSPOT detected: func_0x400400 @ 0x400400
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[HotspotDetector] HOTSPOT detected: func_0x400800 @ 0x400800
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[HotspotDetector] HOTSPOT detected: func_0x400300 @ 0x400300
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[HotspotDetector] HOTSPOT detected: func_0x400700 @ 0x400700
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[HotspotDetector] HOTSPOT detected: func_0x400200 @ 0x400200
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[HotspotDetector] HOTSPOT detected: func_0x400600 @ 0x400600
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[HotspotDetector] HOTSPOT detected: func_0x400100 @ 0x400100
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[HotspotDetector] HOTSPOT detected: func_0x400500 @ 0x400500
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[HotspotDetector] HOTSPOT detected: func_0x400900 @ 0x400900
+  Calls: 10000 (threshold: 4234)
+  Memory ops: 20000 (threshold: 8439)
+[Phase 2] Detected 10 hotspots
+
+[Phase 2] Processing hotspot: func_0x400000 @ 0x400000
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+[Phase 2] Processing hotspot: func_0x400400 @ 0x400400
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+[Phase 2] Processing hotspot: func_0x400800 @ 0x400800
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+[Phase 2] Processing hotspot: func_0x400300 @ 0x400300
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+[Phase 2] Processing hotspot: func_0x400700 @ 0x400700
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+[Phase 2] Processing hotspot: func_0x400200 @ 0x400200
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+[Phase 2] Processing hotspot: func_0x400600 @ 0x400600
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+[Phase 2] Processing hotspot: func_0x400100 @ 0x400100
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+[Phase 2] Processing hotspot: func_0x400500 @ 0x400500
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+[Phase 2] Processing hotspot: func_0x400900 @ 0x400900
+[Phase 2]   Reason: high_call_frequency+high_memory_activity
+[Phase 2]   (Patching skipped in simulation mode)
+[Phase 2]   Patch installed successfully
+
+=== END PHASE 2 ===
+
+[Engine] Exporting results to test_results_real/mystery_results.json...
+[Engine] Results exported successfully
+
+=====================================
+   ADAPTIVE ENGINE FINAL SUMMARY
+=====================================
+
+=== Engine Configuration ===
+Call Threshold:     0 (adaptive)
+Memory Threshold:   0 (adaptive)
+Time Window:        5.0 sec
+Sensitivity:        0.60
+Strategy:           balanced
+Max Functions:      10000
+Output File:        test_results_real/mystery_results.json
+Verbose:            yes
+============================
+
+
+=== Profiler Summary ===
+Total Instructions:    0
+Instrumented Calls:    114496
+Instrumented Mem Ops:  218018
+Functions Tracked:     221
+Total Calls Recorded:  114496
+Total Mem Ops:         218018
+
+Statistics:
+  Call Mean:           518.08
+  Call StdDev:         2064.57
+  Call P95:            100
+  Call P99:            10000
+  Memory Mean:         986.51
+  Memory StdDev:       4140.37
+  Memory P95:          200
+  Memory P99:          20000
+========================
+
+
+=== Hotspot Detection Summary ===
+Total Hotspots Detected: 10
+Criteria Initialized:    YES
+Call Threshold:          4234
+Memory Threshold:        8439
+Statistical Multiplier:  1.80
+=================================
+
+
+=== Patcher Summary ===
+Total Patches:       0
+Successful Patches:  0
+Failed Patches:      0
+=======================
+
+=== Top 10 Most Called Functions ===
+ 1. func_0x400000 @ 0x400000
+    Calls: 10000 ⚡ HOTSPOT 🔧 PATCHED
+ 2. func_0x404000 @ 0x404000
+    Calls: 100
+ 3. func_0x401100 @ 0x401100
+    Calls: 100
+ 4. func_0x405100 @ 0x405100
+    Calls: 100
+ 5. func_0x402200 @ 0x402200
+    Calls: 100
+ 6. func_0x406200 @ 0x406200
+    Calls: 100
+ 7. func_0x500000 @ 0x500000
+    Calls: 50
+ 8. func_0x5018b0 @ 0x5018b0
+    Calls: 50
+ 9. func_0x500dc0 @ 0x500dc0
+    Calls: 50
+10. func_0x5002d0 @ 0x5002d0
+    Calls: 50
+=====================================
+
+
+[Engine] Cleaning up...
+
+[Engine] Shutdown complete

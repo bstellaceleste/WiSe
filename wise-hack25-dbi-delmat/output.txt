@@ -1,0 +1,30 @@
+[INFO] Logging initialized (level: INFO)
+[1;32m[2025-12-20 09:24:42.550][PID:126751:TID:126751][INFO][0m === DBI Engine Configuration ===
+[1;32m[2025-12-20 09:24:42.550][PID:126751:TID:126751][INFO][0m Hotspot multiplier:      2.00
+[1;32m[2025-12-20 09:24:42.550][PID:126751:TID:126751][INFO][0m Minimum calls:           5000
+[1;32m[2025-12-20 09:24:42.550][PID:126751:TID:126751][INFO][0m Analysis interval:       500 ms
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Memory tracking:         ENABLED
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Branch tracking:         DISABLED
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Verbose logging:         DISABLED
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m External patches:        DENIED
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Max functions:           64
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Memory threshold mult:   1.50
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Call window size:        1000
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Hotspot cooldown:        10000 ms
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Log to file:             NO
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Profile mode:            LIGHT
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m Adaptation strategy:     CONSERVATIVE
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m ================================
+[1;32m[2025-12-20 09:24:42.551][PID:126751:TID:126751][INFO][0m WiSe Hack'25 DBI Engine initialized
+[1;32m[2025-12-20 09:24:42.552][PID:126751:TID:126751][INFO][0m PID: 126751, Process: wise_logic
+[1;32m[2025-12-20 09:24:42.552][PID:126751:TID:126751][INFO][0m === WiSe Hack'25 DBI Engine Ready ===
+[1;32m[2025-12-20 09:24:42.552][PID:126751:TID:126751][INFO][0m Instrumentation active - monitoring application
+[1;32m[2025-12-20 09:24:42.552][PID:126751:TID:126751][INFO][0m Press Ctrl+C to stop and see final statistics
+[1;32m[2025-12-20 09:24:42.552][PID:126751:TID:126751][INFO][0m ======================================
+[1;32m[2025-12-20 09:24:42.553][PID:126751:TID:126751][INFO][0m Module loaded: libwise_dbi.so (base: 0x74e5e8802000, size: 69632)
+[1;32m[2025-12-20 09:24:42.553][PID:126751:TID:126751][INFO][0m Module loaded: wise_logic (base: 0x74e6287fa000, size: 20480)
+[1;32m[2025-12-20 09:24:42.553][PID:126751:TID:126751][INFO][0m Module loaded: libdynamorio.so (base: 0x74e62c800000, size: 2338816)
+[1;32m[2025-12-20 09:24:42.553][PID:126751:TID:126751][INFO][0m Module loaded: ld-linux-x86-64.so.2 (base: 0x74e62cb22000, size: 245760)
+[1;32m[2025-12-20 09:24:42.553][PID:126751:TID:126751][INFO][0m Module loaded: linux-vdso.so.1 (base: 0x7fffd4544000, size: 8192)
+[1;32m[2025-12-20 09:24:42.556][PID:126758:TID:126758][INFO][0m Analysis thread started
+[1;32m[2025-12-20 09:24:43.299][PID:126751:TID:126751][INFO][0m Module loaded: libc.so.6 (base: 0x74e62be00000, size: 2265088)

@@ -1,0 +1,1455 @@
+=========================================
+Building test binaries...
+=========================================
+[1/3] Compiling wise_memory...
+      ✅ wise_memory compiled
+[2/3] Compiling wise_logic...
+      ✅ wise_logic compiled
+[3/3] Compiling wise_balanced...
+      ✅ wise_balanced compiled
+=========================================
+Test binaries:
+total 60K
+-rwxrwxr-x 1 delmat delmat 19K Dec 20 22:24 wise_balanced
+-rwxrwxr-x 1 delmat delmat 19K Dec 20 22:24 wise_logic
+-rwxrwxr-x 1 delmat delmat 19K Dec 20 22:24 wise_memory
+=========================================
+=========================================
+Running: wise_memory (Memory Intensive)
+=========================================
+DBI_VERBOSE=1 /home/delmat/dynamorio/build/bin64/drrun -root /home/delmat/dynamorio/build -c ./libwise_dbi.so -- test_binaries/wise_memory
+[INFO] Logging initialized (level: INFO)
+[1;32m[2025-12-20 22:24:20.571][PID:141719:TID:141719][INFO][0m === DBI Engine Configuration ===
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Hotspot multiplier:      2.00
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Minimum calls:           50
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Analysis interval:       500 ms
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Memory tracking:         ENABLED
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Branch tracking:         DISABLED
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Verbose logging:         ENABLED
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m External patches:        DENIED
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Max functions:           64
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Memory threshold mult:   1.50
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Call window size:        1000
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Hotspot cooldown:        10000 ms
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Log to file:             NO
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Profile mode:            LIGHT
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Adaptation strategy:     CONSERVATIVE
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m ================================
+[1;32m[2025-12-20 22:24:20.572][PID:141719:TID:141719][INFO][0m Log level updated to DEBUG
+[1;36m[2025-12-20 22:24:20.572][PID:141719:TID:141719][DEBUG][0m Statistics system initialized
+[1;32m[2025-12-20 22:24:20.573][PID:141719:TID:141719][INFO][0m Analysis thread launched (TID: 1)
+[1;32m[2025-12-20 22:24:20.573][PID:141719:TID:141719][INFO][0m WiSe Hack'25 DBI Engine initialized
+[1;32m[2025-12-20 22:24:20.573][PID:141719:TID:141719][INFO][0m PID: 141719, Process: wise_memory
+[1;32m[2025-12-20 22:24:20.573][PID:141719:TID:141719][INFO][0m No statistics collected yet
+[1;32m[2025-12-20 22:24:20.582][PID:141719:TID:141719][INFO][0m === WiSe Hack'25 DBI Engine Ready ===
+[1;32m[2025-12-20 22:24:20.582][PID:141719:TID:141719][INFO][0m Instrumentation active - monitoring application
+[1;32m[2025-12-20 22:24:20.582][PID:141719:TID:141719][INFO][0m Press Ctrl+C to stop and see final statistics
+[1;32m[2025-12-20 22:24:20.582][PID:141719:TID:141719][INFO][0m ======================================
+[1;32m[2025-12-20 22:24:20.582][PID:141719:TID:141719][INFO][0m Module cible détecté : libwise_dbi.so (Base: 0x794e37402000)
+[1;33m[2025-12-20 22:24:20.582][PID:141719:TID:141719][WARN][0m Symbole 'process_transaction' non trouvé dans libwise_dbi.so
+[1;32m[2025-12-20 22:24:20.583][PID:141719:TID:141719][INFO][0m Module cible détecté : wise_memory (Base: 0x794e773fa000)
+[1;32m[2025-12-20 22:24:20.583][PID:141719:TID:141719][INFO][0m ✅ Hook posé sur 'process_transaction' à l'adresse 0x794e773fb3a3
+[1;36m[2025-12-20 22:24:20.586][PID:141719:TID:141719][DEBUG][0m Now tracking function: process_transaction @ 0x794e773fb3a3 (total: 1)
+[1;32m[2025-12-20 22:24:20.590][PID:141719:TID:141719][INFO][0m Version optimisée détectée à l'adresse 0x794e773fb423
+[1;32m[2025-12-20 22:24:20.601][PID:141724:TID:141724][INFO][0m Analysis thread started
+[1;36m[2025-12-20 22:24:21.104][PID:141724:TID:141724][DEBUG][0m Analysis cycle 25 - calls: 0, funcs: 1
+[1;36m[2025-12-20 22:24:21.604][PID:141724:TID:141724][DEBUG][0m Analysis cycle 29 - calls: 2, funcs: 1
+[1;36m[2025-12-20 22:24:22.105][PID:141724:TID:141724][DEBUG][0m Analysis cycle 30 - calls: 4, funcs: 1
+[1;36m[2025-12-20 22:24:22.605][PID:141724:TID:141724][DEBUG][0m Analysis cycle 31 - calls: 6, funcs: 1
+[1;36m[2025-12-20 22:24:23.105][PID:141724:TID:141724][DEBUG][0m Analysis cycle 32 - calls: 9, funcs: 1
+[1;36m[2025-12-20 22:24:23.606][PID:141724:TID:141724][DEBUG][0m Analysis cycle 33 - calls: 13, funcs: 1
+[1;36m[2025-12-20 22:24:24.107][PID:141724:TID:141724][DEBUG][0m Analysis cycle 34 - calls: 16, funcs: 1
+[1;36m[2025-12-20 22:24:24.608][PID:141724:TID:141724][DEBUG][0m Analysis cycle 35 - calls: 21, funcs: 1
+[1;36m[2025-12-20 22:24:25.108][PID:141724:TID:141724][DEBUG][0m Analysis cycle 36 - calls: 25, funcs: 1
+[1;36m[2025-12-20 22:24:25.608][PID:141724:TID:141724][DEBUG][0m Analysis cycle 37 - calls: 30, funcs: 1
+[1;36m[2025-12-20 22:24:26.109][PID:141724:TID:141724][DEBUG][0m Analysis cycle 38 - calls: 34, funcs: 1
+[1;36m[2025-12-20 22:24:26.609][PID:141724:TID:141724][DEBUG][0m Analysis cycle 39 - calls: 38, funcs: 1
+[1;36m[2025-12-20 22:24:27.109][PID:141724:TID:141724][DEBUG][0m Analysis cycle 40 - calls: 41, funcs: 1
+[1;36m[2025-12-20 22:24:27.609][PID:141724:TID:141724][DEBUG][0m Analysis cycle 41 - calls: 43, funcs: 1
+[1;36m[2025-12-20 22:24:28.109][PID:141724:TID:141724][DEBUG][0m Analysis cycle 42 - calls: 45, funcs: 1
+[1;36m[2025-12-20 22:24:28.610][PID:141724:TID:141724][DEBUG][0m Analysis cycle 43 - calls: 49, funcs: 1
+[1;36m[2025-12-20 22:24:29.110][PID:141724:TID:141724][DEBUG][0m Analysis cycle 44 - calls: 52, funcs: 1
+ // BINARY 1: MEMORY FOCUS (PID: 141719) ===
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+[MEMORY-BIN] TX 0 Processed
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+[MEMORY-BIN] TX 50 Processed
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+insi[1;36m[2025-12-20 22:24:29.610][PID:141724:TID:141724][DEBUG][0m Analysis cycle 46 - calls: 54, funcs: 1
+[1;36m[2025-12-20 22:24:30.110][PID:141724:TID:141724][DEBUG][0m Analysis cycle 47 - calls: 60, funcs: 1
+[1;36m[2025-12-20 22:24:30.610][PID:141724:TID:141724][DEBUG][0m Analysis cycle 48 - calls: 64, funcs: 1
+[1;36m[2025-12-20 22:24:31.111][PID:141724:TID:141724][DEBUG][0m Analysis cycle 49 - calls: 67, funcs: 1
+[1;36m[2025-12-20 22:24:31.611][PID:141724:TID:141724][DEBUG][0m Analysis cycle 50 - calls: 68, funcs: 1
+[1;36m[2025-12-20 22:24:32.111][PID:141724:TID:141724][DEBUG][0m Analysis cycle 51 - calls: 70, funcs: 1
+[1;36m[2025-12-20 22:24:32.611][PID:141724:TID:141724][DEBUG][0m Analysis cycle 52 - calls: 72, funcs: 1
+[1;36m[2025-12-20 22:24:33.111][PID:141724:TID:141724][DEBUG][0m Analysis cycle 53 - calls: 74, funcs: 1
+[1;36m[2025-12-20 22:24:33.611][PID:141724:TID:141724][DEBUG][0m Analysis cycle 54 - calls: 77, funcs: 1
+[1;36m[2025-12-20 22:24:34.111][PID:141724:TID:141724][DEBUG][0m Analysis cycle 55 - calls: 79, funcs: 1
+[1;36m[2025-12-20 22:24:34.612][PID:141724:TID:141724][DEBUG][0m Analysis cycle 56 - calls: 80, funcs: 1
+de the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the defa[1;36m[2025-12-20 22:24:35.113][PID:141724:TID:141724][DEBUG][0m Analysis cycle 57 - calls: 83, funcs: 1
+[1;36m[2025-12-20 22:24:35.613][PID:141724:TID:141724][DEBUG][0m Analysis cycle 58 - calls: 84, funcs: 1
+[1;36m[2025-12-20 22:24:36.115][PID:141724:TID:141724][DEBUG][0m Analysis cycle 59 - calls: 85, funcs: 1
+[1;36m[2025-12-20 22:24:36.616][PID:141724:TID:141724][DEBUG][0m Analysis cycle 60 - calls: 86, funcs: 1
+[1;36m[2025-12-20 22:24:37.116][PID:141724:TID:141724][DEBUG][0m Analysis cycle 61 - calls: 88, funcs: 1
+[1;36m[2025-12-20 22:24:37.616][PID:141724:TID:141724][DEBUG][0m Analysis cycle 62 - calls: 89, funcs: 1
+[1;36m[2025-12-20 22:24:38.119][PID:141724:TID:141724][DEBUG][0m Analysis cycle 63 - calls: 90, funcs: 1
+[1;36m[2025-12-20 22:24:38.622][PID:141724:TID:141724][DEBUG][0m Analysis cycle 64 - calls: 91, funcs: 1
+[1;36m[2025-12-20 22:24:39.125][PID:141724:TID:141724][DEBUG][0m Analysis cycle 65 - calls: 94, funcs: 1
+[1;36m[2025-12-20 22:24:39.625][PID:141724:TID:141724][DEBUG][0m Analysis cycle 66 - calls: 97, funcs: 1
+[1;36m[2025-12-20 22:24:40.126][PID:141724:TID:141724][DEBUG][0m Analysis cycle 67 - calls: 99, funcs: 1
+[1;36m[2025-12-20 22:24:40.628][PID:141724:TID:141724][DEBUG][0m Analysis cycle 68 - calls: 101, funcs: 1
+[1;36m[2025-12-20 22:24:41.130][PID:141724:TID:141724][DEBUG][0m Analysis cycle 69 - calls: 103, funcs: 1
+[1;36m[2025-12-20 22:24:41.630][PID:141724:TID:141724][DEBUG][0m Analysis cycle 70 - calls: 106, funcs: 1
+[1;36m[2025-12-20 22:24:42.130][PID:141724:TID:141724][DEBUG][0m Analysis cycle 71 - calls: 108, funcs: 1
+[1;36m[2025-12-20 22:24:42.631][PID:141724:TID:141724][DEBUG][0m Analysis cycle 72 - calls: 111, funcs: 1
+[1;36m[2025-12-20 22:24:43.131][PID:141724:TID:141724][DEBUG][0m Analysis cycle 73 - calls: 114, funcs: 1
+[1;36m[2025-12-20 22:24:43.631][PID:141724:TID:141724][DEBUG][0m Analysis cycle 74 - calls: 117, funcs: 1
+ult
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+[MEMORY-BIN] TX 100 Processed
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the defa[1;36m[2025-12-20 22:24:44.133][PID:141724:TID:141724][DEBUG][0m Analysis cycle 75 - calls: 119, funcs: 1
+[1;36m[2025-12-20 22:24:44.635][PID:141724:TID:141724][DEBUG][0m Analysis cycle 76 - calls: 121, funcs: 1
+[1;36m[2025-12-20 22:24:45.135][PID:141724:TID:141724][DEBUG][0m Analysis cycle 77 - calls: 123, funcs: 1
+[1;36m[2025-12-20 22:24:45.635][PID:141724:TID:141724][DEBUG][0m Analysis cycle 78 - calls: 126, funcs: 1
+[1;36m[2025-12-20 22:24:46.135][PID:141724:TID:141724][DEBUG][0m Analysis cycle 79 - calls: 129, funcs: 1
+[1;36m[2025-12-20 22:24:46.635][PID:141724:TID:141724][DEBUG][0m Analysis cycle 80 - calls: 133, funcs: 1
+[1;36m[2025-12-20 22:24:47.135][PID:141724:TID:141724][DEBUG][0m Analysis cycle 81 - calls: 138, funcs: 1
+[1;36m[2025-12-20 22:24:47.635][PID:141724:TID:141724][DEBUG][0m Analysis cycle 82 - calls: 141, funcs: 1
+[1;36m[2025-12-20 22:24:48.137][PID:141724:TID:141724][DEBUG][0m Analysis cycle 83 - calls: 145, funcs: 1
+[1;36m[2025-12-20 22:24:48.637][PID:141724:TID:141724][DEBUG][0m Analysis cycle 84 - calls: 151, funcs: 1
+[1;36m[2025-12-20 22:24:49.137][PID:141724:TID:141724][DEBUG][0m Analysis cycle 85 - calls: 153, funcs: 1
+[1;36m[2025-12-20 22:24:49.637][PID:141724:TID:141724][DEBUG][0m Analysis cycle 86 - calls: 157, funcs: 1
+[1;36m[2025-12-20 22:24:50.137][PID:141724:TID:141724][DEBUG][0m Analysis cycle 87 - calls: 160, funcs: 1
+[1;36m[2025-12-20 22:24:50.638][PID:141724:TID:141724][DEBUG][0m Analysis cycle 88 - calls: 163, funcs: 1
+[1;36m[2025-12-20 22:24:51.138][PID:141724:TID:141724][DEBUG][0m Analysis cycle 89 - calls: 167, funcs: 1
+ult
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+[MEMORY-BIN] TX 150 Processed
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the defa[1;36m[2025-12-20 22:24:51.638][PID:141724:TID:141724][DEBUG][0m Analysis cycle 90 - calls: 168, funcs: 1
+[1;36m[2025-12-20 22:24:52.138][PID:141724:TID:141724][DEBUG][0m Analysis cycle 91 - calls: 172, funcs: 1
+[1;36m[2025-12-20 22:24:52.638][PID:141724:TID:141724][DEBUG][0m Analysis cycle 92 - calls: 174, funcs: 1
+[1;36m[2025-12-20 22:24:53.138][PID:141724:TID:141724][DEBUG][0m Analysis cycle 93 - calls: 178, funcs: 1
+[1;36m[2025-12-20 22:24:53.638][PID:141724:TID:141724][DEBUG][0m Analysis cycle 94 - calls: 181, funcs: 1
+[1;36m[2025-12-20 22:24:54.139][PID:141724:TID:141724][DEBUG][0m Analysis cycle 95 - calls: 184, funcs: 1
+[1;36m[2025-12-20 22:24:54.639][PID:141724:TID:141724][DEBUG][0m Analysis cycle 96 - calls: 186, funcs: 1
+[1;36m[2025-12-20 22:24:55.140][PID:141724:TID:141724][DEBUG][0m Analysis cycle 97 - calls: 188, funcs: 1
+[1;36m[2025-12-20 22:24:55.640][PID:141724:TID:141724][DEBUG][0m Analysis cycle 98 - calls: 190, funcs: 1
+[1;36m[2025-12-20 22:24:56.143][PID:141724:TID:141724][DEBUG][0m Analysis cycle 99 - calls: 193, funcs: 1
+[1;36m[2025-12-20 22:24:56.643][PID:141724:TID:141724][DEBUG][0m Analysis cycle 100 - calls: 195, funcs: 1
+[1;36m[2025-12-20 22:24:57.143][PID:141724:TID:141724][DEBUG][0m Analysis cycle 101 - calls: 197, funcs: 1
+[1;36m[2025-12-20 22:24:57.646][PID:141724:TID:141724][DEBUG][0m Analysis cycle 102 - calls: 200, funcs: 1
+[1;36m[2025-12-20 22:24:58.153][PID:141724:TID:141724][DEBUG][0m Analysis cycle 103 - calls: 202, funcs: 1
+[1;36m[2025-12-20 22:24:58.653][PID:141724:TID:141724][DEBUG][0m Analysis cycle 104 - calls: 206, funcs: 1
+[1;36m[2025-12-20 22:24:59.153][PID:141724:TID:141724][DEBUG][0m Analysis cycle 105 - calls: 207, funcs: 1
+[1;36m[2025-12-20 22:24:59.653][PID:141724:TID:141724][DEBUG][0m Analysis cycle 106 - calls: 209, funcs: 1
+[1;36m[2025-12-20 22:25:00.153][PID:141724:TID:141724][DEBUG][0m Analysis cycle 107 - calls: 211, funcs: 1
+ult
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+[MEMORY-BIN] TX 200 Processed
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the defa[1;36m[2025-12-20 22:25:00.654][PID:141724:TID:141724][DEBUG][0m Analysis cycle 108 - calls: 214, funcs: 1
+[1;36m[2025-12-20 22:25:01.154][PID:141724:TID:141724][DEBUG][0m Analysis cycle 109 - calls: 219, funcs: 1
+[1;36m[2025-12-20 22:25:01.654][PID:141724:TID:141724][DEBUG][0m Analysis cycle 110 - calls: 221, funcs: 1
+[1;36m[2025-12-20 22:25:02.155][PID:141724:TID:141724][DEBUG][0m Analysis cycle 111 - calls: 225, funcs: 1
+[1;36m[2025-12-20 22:25:02.655][PID:141724:TID:141724][DEBUG][0m Analysis cycle 112 - calls: 229, funcs: 1
+[1;36m[2025-12-20 22:25:03.155][PID:141724:TID:141724][DEBUG][0m Analysis cycle 113 - calls: 231, funcs: 1
+[1;36m[2025-12-20 22:25:03.658][PID:141724:TID:141724][DEBUG][0m Analysis cycle 114 - calls: 235, funcs: 1
+[1;36m[2025-12-20 22:25:04.158][PID:141724:TID:141724][DEBUG][0m Analysis cycle 115 - calls: 237, funcs: 1
+[1;36m[2025-12-20 22:25:04.658][PID:141724:TID:141724][DEBUG][0m Analysis cycle 116 - calls: 240, funcs: 1
+[1;36m[2025-12-20 22:25:05.159][PID:141724:TID:141724][DEBUG][0m Analysis cycle 117 - calls: 243, funcs: 1
+[1;36m[2025-12-20 22:25:05.659][PID:141724:TID:141724][DEBUG][0m Analysis cycle 118 - calls: 246, funcs: 1
+[1;36m[2025-12-20 22:25:06.159][PID:141724:TID:141724][DEBUG][0m Analysis cycle 119 - calls: 251, funcs: 1
+[1;36m[2025-12-20 22:25:06.659][PID:141724:TID:141724][DEBUG][0m Analysis cycle 120 - calls: 253, funcs: 1
+[1;36m[2025-12-20 22:25:07.160][PID:141724:TID:141724][DEBUG][0m Analysis cycle 121 - calls: 258, funcs: 1
+[1;36m[2025-12-20 22:25:07.660][PID:141724:TID:141724][DEBUG][0m Analysis cycle 122 - calls: 262, funcs: 1
+[1;36m[2025-12-20 22:25:08.160][PID:141724:TID:141724][DEBUG][0m Analysis cycle 123 - calls: 265, funcs: 1
+[1;36m[2025-12-20 22:25:08.660][PID:141724:TID:141724][DEBUG][0m Analysis cycle 124 - calls: 269, funcs: 1
+ult
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+[MEMORY-BIN] TX 250 Processed
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the default
+inside the defa[1;36m[2025-12-20 22:25:09.160][PID:141724:TID:141724][DEBUG][0m Analysis cycle 125 - calls: 272, funcs: 1
+[1;36m[2025-12-20 22:25:09.660][PID:141724:TID:141724][DEBUG][0m Analysis cycle 126 - calls: 275, funcs: 1
+[1;36m[2025-12-20 22:25:10.160][PID:141724:TID:141724][DEBUG][0m Analysis cycle 127 - calls: 278, funcs: 1
+[1;36m[2025-12-20 22:25:10.661][PID:141724:TID:141724][DEBUG][0m Analysis cycle 128 - calls: 281, funcs: 1
+[1;36m[2025-12-20 22:25:11.163][PID:141724:TID:141724][DEBUG][0m Analysis cycle 129 - calls: 285, funcs: 1
+[1;36m[2025-12-20 22:25:11.665][PID:141724:TID:141724][DEBUG][0m Analysis cycle 130 - calls: 288, funcs: 1
+[1;36m[2025-12-20 22:25:12.165][PID:141724:TID:141724][DEBUG][0m Analysis cycle 131 - calls: 290, funcs: 1
+[1;36m[2025-12-20 22:25:12.665][PID:141724:TID:141724][DEBUG][0m Analysis cycle 132 - calls: 294, funcs: 1
+[1;36m[2025-12-20 22:25:13.166][PID:141724:TID:141724][DEBUG][0m Analysis cycle 133 - calls: 296, funcs: 1
+[1;36m[2025-12-20 22:25:13.666][PID:141724:TID:141724][DEBUG][0m Analysis cycle 134 - calls: 298, funcs: 1
+[1;36m[2025-12-20 22:25:14.166][PID:141724:TID:141724][DEBUG][0m Analysis cycle 135 - calls: 299, funcs: 1
+[1;36m[2025-12-20 22:25:14.667][PID:141724:TID:141724][DEBUG][0m Analysis cycle 136 - calls: 301, funcs: 1
+[1;36m[2025-12-20 22:25:15.167][PID:141724:TID:141724][DEBUG][0m Analysis cycle 137 - calls: 305, funcs: 1
+[1;36m[2025-12-20 22:25:15.668][PID:141724:TID:141724][DEBUG][0m Analysis cycle 138 - calls: 307, funcs: 1
+[1;36m[2025-12-20 22:25:16.168][PID:141724:TID:141724][DEBUG][0m Analysis cycle 139 - calls: 311, funcs: 1
+[1;36m[2025-12-20 22:25:16.668][PID:141724:TID:141724][DEBUG][0m Analysis cycle 140 - calls: 315, funcs: 1
+[1;36m[2025-12-20 22:25:17.168][PID:141724:TID:141724][DEBUG][0m Analysis cycle 141 - calls: 316, funcs: 1
